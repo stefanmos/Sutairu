@@ -1,0 +1,42 @@
+@import 'config'
+
+$column-width: 100% / $columns
+
+[class*='grid']:after
+  content: ""
+  display: table
+  clear: both
+
+.grid-full
+  width: 100%
+
+.grid
+  max-width: $grid-size
+  margin: 0 auto
+
+.column
+  float: left
+  padding: $content-padding
+  background: none
+  border: 1px solid #FFF
+
+@for $x from 1 through $columns
+  .column-#{$x}-#{$columns}
+    width: $column-width * $x
+    @extend .column
+
+@media (min-width: 700px) and (max-width: 1100px)
+
+@media (min-width: 480px) and (max-width: 700px)
+  @for $x from 1 through $columns
+    .column-#{$x}-#{$columns}
+      width: 50%
+
+@media (max-width: 480px)
+  @for $x from 1 through $columns
+    .column-#{$x}-#{$columns}
+      width: 100%
+
+.column-showcase div
+  background-color: #E3E3E3
+  border: 1px solid #FFF
