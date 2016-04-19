@@ -180,6 +180,7 @@ label {
   user-select: none;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease; }
   .dropdown ul {
@@ -193,6 +194,7 @@ label {
     pointer-events: none;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease; }
     .dropdown ul li {
@@ -212,6 +214,7 @@ label {
         border-radius: 0;
         -webkit-transition: all 0.3s ease;
         -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
         -o-transition: all 0.3s ease;
         transition: all 0.3s ease; }
     .dropdown ul li:first-child {
@@ -237,6 +240,7 @@ label {
   border-width: 5px;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease; }
 
@@ -355,4 +359,4 @@ hr {
   .spacer {
     height: 10px; } }
 
-/*# sourceMappingURL=burokko.css.map */
+/*# sourceMappingURL=satairu.css.map */

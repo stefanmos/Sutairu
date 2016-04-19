@@ -25,14 +25,12 @@ $column-width: 100% / $columns
     width: $column-width * $x
     @extend .column
 
-@media (min-width: 700px) and (max-width: 1100px)
-
-@media (min-width: 480px) and (max-width: 700px)
-  @for $x from 1 through $columns
+@media (min-width: $mobile) and (max-width: $tablet)
+  @for $x from 1 through ($columns - 1)
     .column-#{$x}-#{$columns}
       width: 50%
 
-@media (max-width: 480px)
+@media (max-width: $mobile)
   @for $x from 1 through $columns
     .column-#{$x}-#{$columns}
       width: 100%

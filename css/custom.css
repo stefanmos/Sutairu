@@ -1,6 +1,6 @@
 /*
 Error: Undefined variable: "$dark-background".
-        on line 9 of sass/custom.sass
+        on line 9 of /Users/stefanmos/Documents/Projects/Sutairu/sass/custom.sass
 
 4:   margin: auto
 5:   color: #8A8A8A
@@ -11,7 +11,7 @@ Error: Undefined variable: "$dark-background".
 10:   padding: 30px 0
 
 Backtrace:
-sass/custom.sass:9
+/Users/stefanmos/Documents/Projects/Sutairu/sass/custom.sass:9
 /Users/stefanmos/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Users/stefanmos/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/script/tree/node.rb:50:in `perform'
 /Users/stefanmos/.rvm/gems/ruby-2.2.1/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:395:in `visit_prop'
@@ -63,4 +63,4 @@ sass/custom.sass:9
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$dark-background\".\A         on line 9 of sass/custom.sass\A \A 4:   margin: auto\A 5:   color: #8A8A8A\A 6: \A 7: footer\A 8:   @extend .grid-full\A 9:   background: $dark-background\A 10:   padding: 30px 0"; }
+  content: "Error: Undefined variable: \"$dark-background\".\A         on line 9 of /Users/stefanmos/Documents/Projects/Sutairu/sass/custom.sass\A \A 4:   margin: auto\A 5:   color: #8A8A8A\A 6: \A 7: footer\A 8:   @extend .grid-full\A 9:   background: $dark-background\A 10:   padding: 30px 0"; }
