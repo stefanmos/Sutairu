@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAEA,UAAU;EAER,eAAe,EAAE,EAAE;;AAErB,UAAU;EAER,eAAe,EAAE,EAAE;;AAErB,UAAU;EAER,eAAe,EAAE,EAAE",
+"mappings": "AAEA,UAAU;EACR,kBAAkB,EAAE,EAAE;EACtB,eAAe,EAAE,EAAE;;AAErB,UAAU;EACR,kBAAkB,EAAE,EAAE;EACtB,eAAe,EAAE,EAAE;;AAErB,UAAU;EACR,kBAAkB,EAAE,EAAE;EACtB,eAAe,EAAE,EAAE",
 "sources": ["../sass/animations.sass"],
 "names": [],
 "file": "animations.css"
