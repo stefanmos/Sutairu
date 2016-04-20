@@ -31,7 +31,7 @@ Included these two stylesheets to use Sutairu
 
 ### Set up the config.sass file
 
-I have included a very basic configuration file to help you set up the desired amount of columns, grid size, breakpoints, colors, fonts, paddings and a few utilities. Just set up as desired and run your sass compiler
+I have included a very basic configuration file to help you set up the desired amount of columns, grid size, breakpoints, colors, fonts, paddings and a few utilities. Set these up to your requirements and run your SASS compiler.
 
 ```sass
 // Set the number of columns
@@ -67,7 +67,7 @@ To start building a layout add `.grid` to create constrained content or `.grid-f
 
 ### UI
 
-I will shortly write this section as soon as I have completed the above to do's
+I will shortly write this section as soon as I have completed the above to do's.
 
 ### Final Words
 
