@@ -1,5 +1,5 @@
 # Sutairu 0.6.1
-Lighweight SASS Framework
+Lighweight Sass Framework
 
 <a href="https://codeclimate.com/github/stefanmos/Sutairu"><img src="https://codeclimate.com/github/stefanmos/Sutairu/badges/gpa.svg" /></a>
 
@@ -8,7 +8,7 @@ Website: http://stefanmos.github.io
 ### Updates:
 - Added Animate.css
 - Added Vendor Prefixes for animations
-- Restructured a lot of the SASS
+- Restructured a lot of the Sass
 - Bug Fixes
 
 ### Build list (To Do):
