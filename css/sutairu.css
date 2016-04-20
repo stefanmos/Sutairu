@@ -156,14 +156,14 @@ label {
   font-size: 10px;
   font-weight: 400; }
 
-.dropdown {
+.dropdown, select {
+  -webkit-appearance: none;
   position: relative;
   padding: 12px 40px 12px 20px;
   display: inline-block;
-  float: left;
   text-decoration: none;
   font-weight: bold;
-  margin: 5px 5px 5px 0;
+  margin: auto;
   border-radius: 4px;
   border: 1px solid #2c3e50;
   background: none;
@@ -183,7 +183,7 @@ label {
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease; }
-  .dropdown ul {
+  .dropdown ul, select ul {
     position: absolute;
     z-index: 999;
     width: 100%;
@@ -197,7 +197,7 @@ label {
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease; }
-    .dropdown ul li {
+    .dropdown ul li, select ul li {
       display: block;
       float: left;
       margin: 0;
@@ -205,7 +205,7 @@ label {
       border-left: 1px solid #2c3e50;
       border-right: 1px solid #2c3e50;
       background: #FFF; }
-      .dropdown ul li a {
+      .dropdown ul li a, select ul li a {
         padding: 10px;
         text-align: left;
         display: block;
@@ -217,10 +217,10 @@ label {
         -ms-transition: all 0.3s ease;
         -o-transition: all 0.3s ease;
         transition: all 0.3s ease; }
-    .dropdown ul li:first-child {
+    .dropdown ul li:first-child, select ul li:first-child {
       border-radius: 4px 4px 0 0;
       border-top: 1px solid #2c3e50; }
-    .dropdown ul li:last-child {
+    .dropdown ul li:last-child, select ul li:last-child {
       border-radius: 0 0 4px 4px;
       border-bottom: 1px solid #2c3e50; }
 
@@ -333,7 +333,7 @@ img {
 hr {
   width: 100%;
   margin: auto;
-  border: 0.5px solid #000;
+  border: 0.5px solid #EAEAEA;
   height: 0px;
   margin: 20px 0; }
 
