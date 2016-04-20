@@ -27,14 +27,14 @@ To start building a layout add `.grid` to define the content width or `.grid-fil
 ```css
 <div class="grid-fill">
     <div class="grid">  
-        <div class="column-1-1">
-            <div class="block">column-1-1</div>
+        <div class="column-4-12">
+            <div class="block">column-4-12</div>
         </div>
-        <div class="column-2-1"> 
-            <div class="block">column-2-1</div>
+        <div class="column-4-12">
+            <div class="block">column-4-12</div>
         </div>
-        <div class="column-2-1">
-            <div class="block">column-2-1</div>
+        <div class="column-4-12">
+            <div class="block">column-4-12</div>
         </div>
     </div>
 </div>
