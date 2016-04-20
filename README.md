@@ -5,13 +5,13 @@ Lighweight SASS Framework
 
 Website: http://stefanmos.github.io
 
-Updates:
+### Updates:
 - Added Animate.css
 - Added Vendor Prefixes for animations
 - Restructured a lot of the SASS
 - Bug Fixes
 
-To Do:
+### To Do:
 - Add -moz properties in Animate.css (This is currently killing my GPA, I might just remove this)
 - Create new buttons
 - Add custom checkboxes
@@ -20,7 +20,7 @@ To Do:
 - Create Sutairu Ruby Gem
 - Install wit npm
 
-How to use
+### How to use
 
 To start building a layout add `.grid` to define the content width or `.grid-fill` to create a full  width section. They can also be used together by surrounding `.grid` with `.grid-fill` when you want a full-width color background but you still want your content constrained. Afterwards just add your column widths and you have a responsive page structure.
 
