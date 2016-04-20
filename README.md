@@ -18,7 +18,7 @@ Website: http://stefanmos.github.io
 - Add validation errors
 - Add sticky sections
 - Create Sutairu Ruby Gem
-- Install wit npm
+- Install with npm
 
 ### Setup
 
