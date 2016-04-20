@@ -42,6 +42,7 @@ $grid-size: 800px
 $desktop: 1100px
 $tablet: 700px
 $mobile: 480px
+...
 ```
 
 ### How to use
