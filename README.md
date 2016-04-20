@@ -1,4 +1,4 @@
-# Satairu 0.0.3
+# Satairu 0.6.1
 Lighweight SASS Framework
 
 <a href="https://codeclimate.com/github/stefanmos/Sutairu"><img src="https://codeclimate.com/github/stefanmos/Sutairu/badges/gpa.svg" /></a>
