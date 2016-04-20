@@ -33,7 +33,7 @@ Included these two stylesheets to use Sutairu
 
 I have included a very basic configuration file to help you set up the desired amount of columns, grid size, breakpoints, colors, fonts, paddings and a few utilities. Just set up as desired and run your sass compiler
 
-```css
+```sass
 // Set the number of columns
 $columns: 12
 $grid-size: 800px
@@ -49,7 +49,7 @@ $mobile: 480px
 
 To start building a layout add `.grid` to create constrained content or `.grid-fill` to create a full width section. They can also be used together by surrounding `.grid` with `.grid-fill` when you want a full-width color background but you still want your content constrained. Afterwards just add your column widths and you have a responsive page structure.
 
-```css
+```html
 <div class="grid-fill">
     <div class="grid">  
         <div class="column-4-12">
