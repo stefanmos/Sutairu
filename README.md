@@ -47,7 +47,7 @@ $mobile: 480px
 
 ### How to use
 
-To start building a layout add `.grid` to create constrained content or `.grid-fill` to create a full width section. They can also be used together by surrounding `.grid` with `.grid-fill` when you want a full-width color background but you still want your content constrained. Afterwards just add your column widths and you have a responsive page structure.
+To start building a layout add `.grid` to create constrained content or `.grid-fill` to create a full width section. They can also be used together by surrounding `.grid` with `.grid-fill` when you want a full-width color background but you still want your content constrained. Afterwards just add your columns like `column-6-12` and you have a responsive page structure.
 
 ```html
 <div class="grid-fill">
