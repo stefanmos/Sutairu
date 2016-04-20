@@ -11,7 +11,7 @@ Website: http://stefanmos.github.io
 - Restructured a lot of the SASS
 - Bug Fixes
 
-### Build list(To Do):
+### Build list (To Do):
 - Add -moz properties in Animate.css (This is currently killing my GPA, I might just remove this)
 - Create new buttons
 - Add custom checkboxes
