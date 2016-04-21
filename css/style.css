@@ -64,8 +64,7 @@ table {
 .column, .column-1-12, .column-2-12, .column-3-12, .column-4-12, .column-5-12, .column-6-12, .column-7-12, .column-8-12, .column-9-12, .column-10-12, .column-11-12, .column-12-12 {
   float: left;
   padding: 20px;
-  background: none;
-  border: 1px solid #FFF; }
+  background: none; }
 
 .column-1-12 {
   width: 8.33333%; }
@@ -550,8 +549,7 @@ hr {
 .column, .column-1-12, .column-2-12, .column-3-12, .column-4-12, .column-5-12, .column-6-12, .column-7-12, .column-8-12, .column-9-12, .column-10-12, .column-11-12, .column-12-12 {
   float: left;
   padding: 20px;
-  background: none;
-  border: 1px solid #FFF; }
+  background: none; }
 
 .column-1-12 {
   width: 8.33333%; }
