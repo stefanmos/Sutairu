@@ -1,14 +1,9 @@
 // Dropdowns
 
 (function() {
-  $('.dropdown').click(function(e) {
+  $('.dropdown, .dropdown a').click(function(e) {
   	$('.dropdown').removeClass('open');
     $(this).toggleClass('open');
-    e.stopPropagation()
-  });
-
-  $('.dropdown a').click(function(e) {
-    $('.dropdown').removeClass('open');
     e.stopPropagation()
   });
 
