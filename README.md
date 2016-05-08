@@ -12,6 +12,7 @@ Website: http://stefanmos.github.io
 - Config files has a few new varibles
 - Mixins are separated now
 - Fonts are all changes from em to rem with base as 1px
+- Added styling for Select boxes
 
 ### Build list (To Do):
 - Add custom checkboxes
