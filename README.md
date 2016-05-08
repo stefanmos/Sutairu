@@ -1,4 +1,4 @@
-# Sutairu 0.6.1
+# Sutairu 0.6.2
 Lighweight Sass Framework
 
 <a href="https://codeclimate.com/github/stefanmos/Sutairu"><img src="https://codeclimate.com/github/stefanmos/Sutairu/badges/gpa.svg" /></a>
