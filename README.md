@@ -25,7 +25,7 @@ Website: http://stefanmos.github.io
 Included the Sutairu stylesheet and Javascript files
 
 ```html
-<link rel="stylesheet" href="css/sutairu.css">
+<link rel="stylesheet" href="css/style.css">
 
 <script src='js/jquery.min.js'></script>
 <script src="js/sutairu.js"></script>

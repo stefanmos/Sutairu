@@ -49,9 +49,6 @@ table {
 *:focus {
   outline: 0; }
 
-*, *:before, *:after {
-  box-sizing: border-box !important; }
-
 [class*='grid']:after {
   content: "";
   display: table;
@@ -284,7 +281,7 @@ nav {
   .button-group .button, .button-group .button-float-left, .button-group .button-float-right {
     display: block;
     width: 100%;
-    margin: 0px;
+    margin: 0;
     border-radius: 0; }
 
   border-radius: 4px 4px 0 0;
@@ -442,8 +439,8 @@ ul.tabs:before {
 
 ul.tabs {
   display: block;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   list-style: none; }
 
 ul.tabs li {
@@ -492,7 +489,7 @@ hr {
   width: 100%;
   margin: auto;
   border: 0.5px solid #EAEAEA;
-  height: 0px;
+  height: 0;
   margin: 20px 0; }
 
 .center-text {
