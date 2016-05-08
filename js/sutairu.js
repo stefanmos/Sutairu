@@ -50,7 +50,7 @@ var currentTallest = 0,
    $($el).height('auto')
    topPostion = $el.position().top;
 
-   if (currentRowStart != topPostion) {
+   if (currentRowStart !== topPostion) {
      for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
        rowDivs[currentDiv].height(currentTallest);
      }
