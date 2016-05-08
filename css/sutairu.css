@@ -64,7 +64,7 @@ table {
 .column, .column-1-12, .column-2-12, .column-3-12, .column-4-12, .column-5-12, .column-6-12, .column-7-12, .column-8-12, .column-9-12, .column-10-12, .column-11-12, .column-12-12 {
   float: left;
   padding: 10px;
-  background: #8A8A8A;
+  background: #F7F7F7;
   border: 1px solid #FFFFFF; }
 
 .column-1-12 {
@@ -178,7 +178,7 @@ html {
 body {
   font-size: 14rem;
   font-family: "Raleway", sans-serif;
-  line-height: 1.2;
+  line-height: 1;
   font-weight: 300;
   text-align: left; }
 
@@ -209,7 +209,8 @@ small {
 
 p {
   font-size: 14rem;
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+  line-height: 1.6; }
 
 b {
   font-weight: 500; }
@@ -218,9 +219,9 @@ a {
   text-decoration: none;
   font-size: 12rem;
   font-weight: 300;
-  color: #8A8A8A; }
+  color: #CD6799; }
   a:hover {
-    color: #CD6799; }
+    color: #280d1a; }
 
 nav {
   width: 100%;
@@ -234,12 +235,12 @@ nav {
     nav ul li:last-child {
       margin-right: 0; }
 
-.button, .button-float-left, .button-float-right {
+.button, .button-left, .button-right {
   display: inline-block;
   border: 1px solid #FFFFFF;
-  border-radius: 4px;
+  border-radius: 2px;
   text-align: center;
-  background: #8A8A8A;
+  background: #CD6799;
   font-size: 10rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -253,46 +254,50 @@ nav {
   -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease; }
-  .button:hover, .button-float-left:hover, .button-float-right:hover {
-    background: #CD6799;
+  .button:hover, .button-left:hover, .button-right:hover {
+    background: #9b3366;
     color: #FFF; }
 
-.button-float-left {
+.button-left {
   float: left; }
 
-.button-float-right {
+.button-right {
   float: right; }
 
-.button-group .button, .button-group .button-float-left, .button-group .button-float-right {
-  display: inline-block;
-  border-radius: 0;
-  padding: 10px 15px;
-  margin: 10px -2px; }
+.button-group {
+  display: inline-block; }
+  .button-group .button, .button-group .button-left, .button-group .button-right {
+    display: inline-block;
+    border-radius: 0;
+    padding: 10px 15px;
+    margin: 10px -2px; }
+    .button-group .button:first-child, .button-group .button-left:first-child, .button-group .button-right:first-child {
+      border-radius: 2px 0 0 2px;
+      margin-left: 0; }
+    .button-group .button:last-child, .button-group .button-left:last-child, .button-group .button-right:last-child {
+      border-radius: 0 2px 2px 0;
+      margin-right: 0; }
 
-.button-group .button:first-child, .button-group .button-float-left:first-child, .button-group .button-float-right:first-child {
-  border-radius: 4px 0 0 4px;
-  margin-left: 0; }
-
-.button-group .button:last-child, .button-group .button-float-left:last-child, .button-group .button-float-right:last-child {
-  border-radius: 0 4px 4px 0;
-  margin-right: 0; }
-
-@media (max-width: 700px) {
-  .button-group .button, .button-group .button-float-left, .button-group .button-float-right {
+@media (max-width: 480px) {
+  .button-group {
     display: block;
-    width: 100%;
-    margin: 0;
-    border-radius: 0; }
-
-  border-radius: 4px 4px 0 0;
-  border-radius: 0 0 4px 4px; }
+    width: 100%; }
+    .button-group .button, .button-group .button-left, .button-group .button-right {
+      display: block;
+      width: 100%;
+      margin: 0;
+      border-radius: 0; }
+      .button-group .button:first-child, .button-group .button-left:first-child, .button-group .button-right:first-child {
+        border-radius: 2px 2px 0 0; }
+      .button-group .button:last-child, .button-group .button-left:last-child, .button-group .button-right:last-child {
+        border-radius: 0 0 2px 2px; } }
 input, textarea {
   width: 100%;
   padding: 10px;
   margin: 5px 0 10px 0;
   background: none;
   border: 1px solid #000;
-  border-radius: 4px;
+  border-radius: 2px;
   font-family: "Raleway", sans-serif;
   font-size: 12px;
   font-weight: 300;
@@ -311,18 +316,40 @@ label {
   font-size: 10px;
   font-weight: 400; }
 
-.dropdown, select {
+select {
+  display: inline-block;
+  position: relative;
+  margin-top: 10px;
+  background: #CD6799;
+  background-image: linear-gradient(45deg, transparent 50%, #FFF 50%), linear-gradient(135deg, #FFF 50%, transparent 50%);
+  background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+  background-size: 5px 5px;
+  background-repeat: no-repeat;
+  -webkit-appearance: none;
+  padding: 9px 20px 9px 20px;
+  border-radius: 2px;
+  border: 1px solid #FFFFFF;
+  Color: #FFFFFF;
+  font-weight: 500;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer; }
+  select:hover {
+    border: 1px solid #9b3366; }
+
+.dropdown {
   -webkit-appearance: none;
   position: relative;
-  padding: 12px 40px 12px 20px;
+  padding: 10px 40px 10px 20px;
   display: inline-block;
   text-decoration: none;
   font-weight: bold;
   margin: auto;
-  border-radius: 4px;
+  border-radius: 2px;
   border: 1px solid #FFFFFF;
   background: #CD6799;
-  Color: #000;
+  Color: #FFFFFF;
   font-weight: 500;
   font-size: 10px;
   text-transform: uppercase;
@@ -338,7 +365,11 @@ label {
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease; }
-  .dropdown ul, select ul {
+  .dropdown:hover, .dropdowndropdown:focus {
+    color: #FFFFFF;
+    background: #9b3366;
+    border: 1px solid #9b3366; }
+  .dropdown ul {
     position: absolute;
     z-index: 999;
     width: 100%;
@@ -352,37 +383,37 @@ label {
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease; }
-    .dropdown ul li, select ul li {
+    .dropdown ul li {
       display: block;
       float: left;
       margin: 0;
       width: 100%;
       border-left: 1px solid #FFFFFF;
       border-right: 1px solid #FFFFFF;
-      background: #FFF; }
-      .dropdown ul li a, select ul li a {
+      background: #F7F7F7; }
+      .dropdown ul li:first-child {
+        border-radius: 2px 2px 0 0;
+        border-top: #000; }
+      .dropdown ul li:last-child {
+        border-radius: 0 0 2px 2px;
+        border-bottom: #000; }
+      .dropdown ul li a {
+        text-transform: capitalize;
         padding: 10px;
         text-align: left;
         display: block;
-        font-size: 0.75em;
-        color: black;
-        border-radius: 0;
+        font-size: 10rem;
+        font-weight: 500;
+        color: #000;
+        border-radius: 2px;
         -webkit-transition: all 0.3s ease;
         -moz-transition: all 0.3s ease;
         -ms-transition: all 0.3s ease;
         -o-transition: all 0.3s ease;
         transition: all 0.3s ease; }
-    .dropdown ul li:first-child, select ul li:first-child {
-      border-radius: 4px 4px 0 0;
-      border-top: 1px solid #FFFFFF; }
-    .dropdown ul li:last-child, select ul li:last-child {
-      border-radius: 0 0 4px 4px;
-      border-bottom: 1px solid #FFFFFF; }
-
-.dropdown:hover, .dropdown:focus {
-  color: #FFF;
-  background: #000;
-  border: 1px solid #000; }
+        .dropdown ul li a:hover {
+          color: #FFF;
+          background: #CD6799; }
 
 .dropdown:after {
   position: absolute;
@@ -391,7 +422,7 @@ label {
   content: " ";
   height: 0;
   border: solid transparent;
-  border-top-color: #000;
+  border-top-color: #FFF;
   border-width: 5px;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -410,17 +441,13 @@ label {
   content: " ";
   height: 0;
   border: solid transparent;
-  border-bottom-color: #000;
+  border-bottom-color: #F7F7F7;
   border-width: 5px; }
 
 .open > ul {
   opacity: 1;
   padding: 0;
   pointer-events: auto; }
-
-.dropdown ul li a:hover {
-  color: #FFF;
-  background: #000; }
 
 table {
   background: none;
@@ -449,7 +476,7 @@ ul.tabs li {
   color: #222;
   display: inline-block;
   padding: 10px 15px;
-  border-radius: 4px 4px 0 0;
+  border-radius: 2px 2px 0 0;
   cursor: pointer; }
 
 ul.tabs li.current {

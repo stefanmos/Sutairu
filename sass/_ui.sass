@@ -22,7 +22,7 @@ nav
   border: $border-color
   border-radius: $border-radius
   text-align: center
-  background: $secondary-color
+  background: $primary-color
   font-size: 10rem
   text-transform: uppercase
   letter-spacing: 0.1em
@@ -33,44 +33,45 @@ nav
   color: #FFF
   +transition(.5s)
   &:hover
-    background: $primary-color
+    background: darken( $primary-color, 20% )
     color: #FFF
 
-.button-float-left
+.button-left
   @extend .button
   float: left
-.button-float-right
+.button-right
   @extend .button
   float: right
 
 // 6.3.2 Grouped Buttons
 
-.button-group .button
+.button-group
   display: inline-block
-  border-radius: 0
-  padding: 10px 15px
-  margin: 10px -2px
+  .button
+    display: inline-block
+    border-radius: 0
+    padding: 10px 15px
+    margin: 10px -2px
+    &:first-child
+      border-radius: $border-radius 0 0 $border-radius
+      margin-left: 0
+    &:last-child
+      border-radius: 0 $border-radius $border-radius 0
+      margin-right: 0
 
-.button-group .button:first-child
-  border-radius: $border-radius 0 0 $border-radius
-  margin-left: 0
-
-.button-group .button:last-child
-  border-radius: 0 $border-radius $border-radius 0
-  margin-right: 0
-
-@media (max-width: 700px)
-  .button-group .button
+@media (max-width: $mobile)
+  .button-group
     display: block
     width: 100%
-    margin: 0
-    border-radius: 0
-
-  .button-group .button:first-child
-  border-radius: $border-radius $border-radius 0 0
-
-  .button-group .button:last-child
-  border-radius: 0 0 $border-radius $border-radius
+    .button
+      display: block
+      width: 100%
+      margin: 0
+      border-radius: 0
+      &:first-child
+        border-radius: $border-radius $border-radius 0 0
+      &:last-child
+        border-radius: 0 0 $border-radius $border-radius
 
 // 6.4 Input
 
@@ -105,10 +106,32 @@ label
 // 6.6 Button Dropdowns & Select Boxes
 // Note: Rewrite dropdowns with SASS nesting
 
-.dropdown, select
+select
+  display: inline-block
+  position: relative
+  margin-top: 10px
+  background: $primary-color
+  background-image: linear-gradient(45deg, transparent 50%, #FFF 50%), linear-gradient(135deg, #FFF 50%, transparent 50%)
+  background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em
+  background-size: 5px 5px
+  background-repeat: no-repeat
+  -webkit-appearance: none
+  padding: 9px 20px 9px 20px
+  border-radius: $border-radius
+  border: $border-color
+  Color: #FFFFFF
+  font-weight: 500
+  font-size: 10px
+  text-transform: uppercase
+  letter-spacing: 0.1em
+  cursor: pointer
+  &:hover
+    border: 1px solid darken( $primary-color, 20% )
+
+.dropdown
   -webkit-appearance: none
   position: relative
-  padding: 12px 40px 12px 20px
+  padding: 10px 40px 10px 20px
   display: inline-block
   text-decoration: none
   font-weight: bold
@@ -116,7 +139,7 @@ label
   border-radius: $border-radius
   border: $border-color
   background: $primary-color
-  Color: #000
+  Color: #FFFFFF
   font-weight: 500
   font-size: 10px
   text-transform: uppercase
@@ -128,6 +151,10 @@ label
   -o-user-select: none
   user-select: none
   @include transition(.3s)
+  &:hover, &dropdown:focus
+    color: #FFFFFF
+    background: darken( $primary-color, 20% )
+    border: 1px solid darken( $primary-color, 20% )
   ul
     position: absolute
     z-index: 999
@@ -145,27 +172,27 @@ label
       width: 100%
       border-left: $border-color
       border-right: $border-color
-      background: #FFF
+      background: $secondary-color
+      &:first-child
+        border-radius: $border-radius $border-radius 0 0
+        border-top: #000
+      &:last-child
+        border-radius: 0 0 $border-radius $border-radius
+        border-bottom: #000
       a
         text-decoration:none
+        text-transform: capitalize
         padding: 10px
         text-align: left
         display: block
-        font-size: .75em
-        color: black
-        border-radius: 0
+        font-size: 10rem
+        font-weight: 500
+        color: #000
+        border-radius: $border-radius
         @include transition(.3s)
-    li:first-child
-      border-radius: $border-radius $border-radius 0 0
-      border-top: $border-color
-    li:last-child
-      border-radius: 0 0 $border-radius $border-radius
-      border-bottom: $border-color
-
-.dropdown:hover, .dropdown:focus
-  color: #FFF
-  background: #000
-  border: 1px solid #000
+        &:hover
+          color: #FFF
+          background: $primary-color
 
 .dropdown:after
   position: absolute
@@ -174,7 +201,7 @@ label
   content: " "
   height: 0
   border: solid transparent
-  border-top-color: #000
+  border-top-color: #FFF
   border-width: 5px
   @include transition(.3s)
 
@@ -189,17 +216,13 @@ label
   content: " "
   height: 0
   border: solid transparent
-  border-bottom-color: #000
+  border-bottom-color: $secondary-color
   border-width: 5px
 
 .open > ul
   opacity: 1
   padding: 0
   pointer-events: auto
-
-.dropdown ul li a:hover
-  color: #FFF
-  background: #000
 
 // 6.7 Tables
 
