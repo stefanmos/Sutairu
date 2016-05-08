@@ -14,7 +14,6 @@ Website: http://stefanmos.github.io
 - Fonts are all changes from em to rem with base as 1px
 
 ### Build list (To Do):
-- Create new buttons
 - Add custom checkboxes
 - Add validation errors
 - Add sticky sections
