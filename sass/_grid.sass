@@ -1,5 +1,3 @@
-@import 'config'
-
 $column-width: 100% / $columns
 
 [class*='grid']:after
@@ -17,7 +15,8 @@ $column-width: 100% / $columns
 .column
   float: left
   padding: $content-padding
-  background: none
+  background: $secondary-color
+  border: $border-color
 
 @for $x from 1 through $columns
   .column-#{$x}-#{$columns}
@@ -33,7 +32,3 @@ $column-width: 100% / $columns
   @for $x from 1 through $columns
     .column-#{$x}-#{$columns}
       width: 100%
-
-.column-showcase div
-  background-color: #E3E3E3
-  border: 1px solid #FFF

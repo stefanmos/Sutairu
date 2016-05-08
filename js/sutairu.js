@@ -21,8 +21,6 @@
 
 
 
-
-
 // Tabs
 
 $(document).ready(function(){
@@ -38,26 +36,6 @@ $(document).ready(function(){
   })
 
 })
-
-
-
-
-
-// animate.css
-
-$.fn.extend({
-    animateCss: function (animationName) {
-        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-        $(this).addClass('animated ' + animationName).one(animationEnd, function() {
-            $(this).removeClass('animated ' + animationName);
-        });
-    }
-});
-
-$('#Animate-1').animateCss('fadeIn');
-$('#Animate-2').animateCss('fadeIn');
-$('#Animate-3').animateCss('fadeIn');
-
 
 
 

@@ -6,27 +6,29 @@ Lighweight Sass Framework
 Website: http://stefanmos.github.io
 
 ### Updates:
-- Added Animate.css
-- Added Vendor Prefixes for animations
-- Restructured a lot of the Sass
-- Bug Fixes
+- I've spend quite a lot of time on restructuring and indexing
+- Removed external animation librairies
+- Config files has a few new varibles
+- Mixins are separated now
+- Fonts are all changes from em to rem with base as 1px
 
 ### Build list (To Do):
-- Add -moz properties in Animate.css (This is currently killing my GPA, I might just remove this)
 - Create new buttons
 - Add custom checkboxes
 - Add validation errors
 - Add sticky sections
-- Create Sutairu Ruby Gem
+- Install as Ruby Gem
 - Install with npm
 
 ### Setup
 
-Included these two stylesheets to use Sutairu
+Included the Sutairu stylesheet and Javascript files
 
 ```html
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/animate.css">
+
+<script src='js/jquery.min.js'></script>
+<script src="js/sutairu.js"></script>
 ```
 
 ### Set up the config.sass file
