@@ -9,7 +9,7 @@ Website: http://stefanmos.github.io
 ### Updates:
 - I've spend quite a lot of time on restructuring and indexing
 - Removed external animation librairies
-- Config files has a few new varibles
+- Config files has a few new variables
 - Mixins are separated now
 - Fonts are all changes from em to rem with base as 1px
 - Added styling for Select boxes
