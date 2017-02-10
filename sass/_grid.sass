@@ -15,8 +15,6 @@ $column-width: 100% / $columns
 .column
   float: left
   padding: $content-padding
-  background: $secondary-color
-  border: $border-color
 
 @for $x from 1 through $columns
   .column-#{$x}-#{$columns}
@@ -24,11 +22,17 @@ $column-width: 100% / $columns
     @extend .column
 
 @media (min-width: $mobile) and (max-width: $tablet)
-  @for $x from 1 through ($columns - 1)
+  @for $x from 1 through 6
     .column-#{$x}-#{$columns}
       width: 50%
+  @for $x from 6 through ($columns - 1)
+    .column-#{$x}-#{$columns}
+      width: 100%
 
 @media (max-width: $mobile)
-  @for $x from 1 through $columns
+  @for $x from 1 through 4
+    .column-#{$x}-#{$columns}
+      width: 50%
+  @for $x from 5 through ($columns - 1)
     .column-#{$x}-#{$columns}
       width: 100%

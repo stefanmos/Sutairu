@@ -5,9 +5,15 @@ nav
   width: 100%
   z-index: 10
   text-align: center
+  background: $secondary-color
+  padding: 10px
+  .nav-left
+    float: left
+  .nav-right
+    float: right
   ul li
     display: inline-block
-    margin: 20px 10px
+    margin: 0 10px
     &:first-child
       margin-left: 0
     &:last-child
@@ -18,7 +24,7 @@ nav
 // 6.3.1 Buttons
 
 .button
-  display: inline-block
+  display: block
   border: $border-color
   border-radius: $border-radius
   text-align: center
@@ -26,8 +32,8 @@ nav
   font-size: 10rem
   text-transform: uppercase
   letter-spacing: 0.1em
-  padding: 10px 30px
-  margin: 10px 0
+  padding: 10px 15px
+  margin: 10px auto
   font-weight: 500
   cursor: pointer
   color: #FFF
@@ -48,10 +54,10 @@ nav
 .button-group
   display: inline-block
   .button
-    display: inline-block
+    @extend .button
     border-radius: 0
-    padding: 10px 15px
     margin: 10px -2px
+    display: inline-block
     &:first-child
       border-radius: $border-radius 0 0 $border-radius
       margin-left: 0
@@ -79,10 +85,9 @@ input, textarea
   width: 100%
   padding: $input-padding
   margin: 5px 0 10px 0
-  background: none
-  border: 1px solid #000
+  background: $secondary-color
+  border: none
   border-radius: $border-radius
-
   font-family: $brand-font
   font-size: 12px
   font-weight: 300
@@ -107,9 +112,9 @@ label
 // Note: Rewrite dropdowns with SASS nesting
 
 select
-  display: inline-block
+  display: block
+  float: left
   position: relative
-  margin-top: 10px
   background: $primary-color
   background-image: linear-gradient(45deg, transparent 50%, #FFF 50%), linear-gradient(135deg, #FFF 50%, transparent 50%)
   background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em
@@ -119,14 +124,13 @@ select
   padding: 9px 20px 9px 20px
   border-radius: $border-radius
   border: $border-color
-  Color: #FFFFFF
+  color: #FFFFFF
   font-weight: 500
   font-size: 10px
   text-transform: uppercase
   letter-spacing: 0.1em
   cursor: pointer
-  &:hover
-    border: 1px solid darken( $primary-color, 20% )
+  width: 200px
 
 .dropdown
   -webkit-appearance: none
@@ -139,7 +143,7 @@ select
   border-radius: $border-radius
   border: $border-color
   background: $primary-color
-  Color: #FFFFFF
+  color: #FFFFFF
   font-weight: 500
   font-size: 10px
   text-transform: uppercase
@@ -170,29 +174,25 @@ select
       float: left
       margin: 0
       width: 100%
-      border-left: $border-color
-      border-right: $border-color
-      background: $secondary-color
+      border-radius: 0
+      background: $primary-color
+      &:hover
+        color: #FFF
+        background: darken( $primary-color, 20% )
       &:first-child
         border-radius: $border-radius $border-radius 0 0
-        border-top: #000
       &:last-child
         border-radius: 0 0 $border-radius $border-radius
-        border-bottom: #000
       a
-        text-decoration:none
+        text-decoration: none
         text-transform: capitalize
         padding: 10px
         text-align: left
         display: block
         font-size: 10rem
         font-weight: 500
-        color: #000
-        border-radius: $border-radius
+        color: #FFF
         @include transition(.3s)
-        &:hover
-          color: #FFF
-          background: $primary-color
 
 .dropdown:after
   position: absolute
@@ -216,7 +216,7 @@ select
   content: " "
   height: 0
   border: solid transparent
-  border-bottom-color: $secondary-color
+  border-bottom-color: $primary-color
   border-width: 5px
 
 .open > ul
@@ -236,7 +236,7 @@ table
     padding: 5px 0
 
   tr
-    border-bottom: 1px solid #000
+    border-bottom: 1px solid $secondary-color
     td
       padding: 5px 0
 
@@ -259,17 +259,18 @@ ul.tabs li
   padding: 10px 15px
   border-radius: $border-radius $border-radius 0 0
   cursor: pointer
+  background: #ededed
 
 ul.tabs li.current
-  background: #ededed
+  background: $secondary-color
   color: #222
 
 ul.tabs li:hover
-  background: #F1F1F1
+  background: $secondary-color
 
 .tab-content
   display: none
-  background: #ededed
+  background: $secondary-color
   padding: 10px
 
 .tab-content.current
