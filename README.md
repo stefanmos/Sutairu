@@ -7,19 +7,23 @@ Lighweight Sass Framework
 Website: http://stefanmos.github.io
 
 ### Updates:
-- I've spend quite a lot of time on restructuring and indexing
-- Removed external animation librairies
-- Config files has a few new variables
+- SASS improvements
+- Selectbox styling
+- Extented config
 - Mixins are separated now
-- Fonts are all changes from em to rem with base as 1px
-- Added styling for Select boxes
+- Fonts are all setup as rem with base of 1px
+- Font Ratio (Augmented Fourth 1.411) rounded to the closest whole number
+- Navagation bars with floated sections
+
+###Fixes
+- Floating fix with custom semantic buttons
 
 ### Build list (To Do):
 - Add custom checkboxes
 - Add validation errors
 - Add sticky sections
-- Install as Ruby Gem
 - Install with npm
+- Slider
 
 ### Setup
 
@@ -81,7 +85,6 @@ $spacer-desktop: 40px
 $spacer-tablet: 20px
 $spacer-mobile: 10px
 
-...
 ```
 
 ### Grids & Columns
@@ -129,7 +132,7 @@ To start building a layout add `.grid` to create constrained content or `.grid-f
 </nav>
 ```
 
-If you want to separate your logo and you menu items you can apply .nav-left and .nav-right to float these sections.
+If you want to separate your logo and you menu items you can apply `.nav-left` and `.nav-right` to float these sections.
 
 ```html
 <nav>
