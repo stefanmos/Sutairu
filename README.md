@@ -2,7 +2,6 @@
 Lighweight Sass Framework
 
 [![Code Climate](https://codeclimate.com/github/stefanmos/Sutairu/badges/gpa.svg)](https://codeclimate.com/github/stefanmos/Sutairu)
-[![Issue Count](https://codeclimate.com/github/stefanmos/Sutairu/badges/issue_count.svg)](https://codeclimate.com/github/stefanmos/Sutairu)
 
 Website: http://stefanmos.github.io
 
