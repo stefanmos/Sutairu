@@ -54,7 +54,6 @@ $mobile: 480px
 
 // Colours
 $body-color: #8A8A8A
-// #CD6799
 $primary-color: #8A8A8A
 $secondary-color: #F7F7F7
 $background-secondary: #F7F7F7
@@ -62,7 +61,7 @@ $background-secondary: #F7F7F7
 $border-color: 1px solid #8A8A8A
 
 $info: #3498db
-$verified: green
+$verified: #83D699
 $warning: #e76e22
 $disabled: #8A8A8A
 
@@ -220,10 +219,6 @@ If you want to separate your logo and you menu items you can apply `.nav-left` a
   <p>Donec ac aliquet nisl, et vulputate lacus. Phasellus sed augue velit. In vitae maximus ex. Proin eu nisl a eros dignissim imperdiet eget non justo. Mauris tristique imperdiet tortor a auctor.</p>
 </div>
 ```
-
-### UI
-
-I will shortly write this section as soon as I have completed the above to do's.
 
 
 ### Final Words
