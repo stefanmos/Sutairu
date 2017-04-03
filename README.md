@@ -14,15 +14,15 @@ Website: http://stefanmos.github.io
 - Font Ratio (Augmented Fourth 1.411) rounded to the closest whole number
 - Navagation bars with floated sections
 
-###Fixes
+### Fixes
 - Floating fix with custom semantic buttons
 
 ### Build list (To Do):
 - Add custom checkboxes
 - Add validation errors
 - Add sticky sections
-- Install with npm
 - Slider
+- Install with npm
 
 ### Setup
 
