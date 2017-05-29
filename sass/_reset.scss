@@ -1,4 +1,6 @@
-// 1. Reset
+////////////////////////////////////////////////////////////////////////////////
+// Reset
+////////////////////////////////////////////////////////////////////////////////
 
 // http://meyerweb.com/eric/tools/css/reset/
 // v2.0 | 20110126
@@ -29,8 +31,9 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: inline-block;
 }
-body {
+body,html {
   line-height: 1;
+  height: 100%;
 }
 ul {
   list-style: none;

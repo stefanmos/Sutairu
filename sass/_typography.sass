@@ -1,6 +1,14 @@
+////////////////////////////////////////////////////////////////////////////////
+// Typography
+////////////////////////////////////////////////////////////////////////////////
+
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900)
 
-// 5. Typography
+// Varibles
+$brand-font: 'Raleway', sans-serif
+$font-base: 1px
+$global-line-height: 1
+$paragraph-line-height: 1.6
 
 html
   font-size: $font-base
@@ -14,7 +22,7 @@ body
 
 h1,h2,h3,h4,h5,h6,small
   font-weight: 300
-  margin: 0.4em 0
+  margin: 10px 0
 
 h1
   font-size: 64rem
@@ -24,23 +32,22 @@ h3
   font-size: 32rem
 h4
   font-size: 23rem
+  font-weight: 400
 h5
   font-size: 16rem
+  font-weight: 400
 h6
   font-size: 11rem
 small
   font-size: 8rem
 p
   font-size: 14rem
-  margin-bottom: 1em
   line-height: $paragraph-line-height
 b
   font-weight: 500
-
 a
-  text-decoration: none
   font-size: 12rem
-  font-weight: 300
+  font-weight: 500
   color: $primary-color
   &:hover
     color: darken($primary-color, 50%)

@@ -1,34 +1,54 @@
-// 6. UI
-// 6.1 Navagation
+////////////////////////////////////////////////////////////////////////////////
+// UI
+////////////////////////////////////////////////////////////////////////////////
 
 nav
   width: 100%
   z-index: 10
   text-align: center
-  background: $secondary-color
-  padding: 10px
+  border: 1px solid $primary-color
+  position: relative
+  // Updating heigh will keep all item verticle centered
+  height: 50px
+  .logo
+    width: 50px
   .nav-left
-    float: left
+    left: 0
+    text-align: left
+    z-index: 1
   .nav-right
-    float: right
-  ul li
-    display: inline-block
-    margin: 0 10px
-    &:first-child
-      margin-left: 0
-    &:last-child
-      margin-right: 0
+    right: 0
+    text-align: right
+    z-index: 1
+  .nav-center
+    display: block
+    margin: auto
+    width: 100%
+  ul
+    position: absolute
+    padding: 10px
+    li
+      display: inline-block
+      margin: 0 10px
+      &:first-child
+        margin-left: 0
+      &:last-child
+        margin-right: 0
+      a
+        text-decoration: none
 
-// 6.2 Lists
-
-// 6.3.1 Buttons
+  // Verticly center ul inside nav
+  .nav-left, .nav-right,.nav-center
+    top: 50%
+    -webkit-transform: translateY(-50%)
+    -ms-transform: translateY(-50%)
+    transform: translateY(-50%)
 
 .button
-  display: block
-  border: $border-color
+  display: inline-block
+  border: $border-style
   border-radius: $border-radius
   text-align: center
-  background: $primary-color
   font-size: 10rem
   text-transform: uppercase
   letter-spacing: 0.1em
@@ -36,20 +56,25 @@ nav
   margin: 10px auto
   font-weight: 500
   cursor: pointer
-  color: #FFF
+  color: $primary-color
+  text-decoration: none
   +transition(.5s)
   &:hover
-    background: darken( $primary-color, 20% )
+    background: $primary-color
     color: #FFF
 
 .button-left
   @extend .button
   float: left
+  margin-right: $border-radius
 .button-right
   @extend .button
   float: right
+  margin-left: $border-radius
+.button-center
+  @extend .button
 
-// 6.3.2 Grouped Buttons
+// Grouped Buttons
 
 .button-group
   display: inline-block
@@ -59,13 +84,13 @@ nav
     margin: 10px -2px
     display: inline-block
     &:first-child
-      border-radius: $border-radius 0 0 $border-radius
+      border-radius: 5px 0 0 5px
       margin-left: 0
     &:last-child
-      border-radius: 0 $border-radius $border-radius 0
+      border-radius: 0 5px 5px 0
       margin-right: 0
 
-@media (max-width: $mobile)
+@media (max-width: $s)
   .button-group
     display: block
     width: 100%
@@ -75,18 +100,23 @@ nav
       margin: 0
       border-radius: 0
       &:first-child
-        border-radius: $border-radius $border-radius 0 0
+        border-radius: 5px 5px 0 0
       &:last-child
-        border-radius: 0 0 $border-radius $border-radius
+        border-radius: 0 0 5px 5px
 
-// 6.4 Input
+ul
+  li
+    list-style: disc
+
+ol
+  li
+    list-style: decimal
 
 input, textarea
   width: 100%
-  padding: $input-padding
+  padding: 10px
   margin: 5px 0 10px 0
-  background: $secondary-color
-  border: none
+  border: $border-style
   border-radius: $border-radius
   font-family: $brand-font
   font-size: 12px
@@ -102,145 +132,47 @@ input::-webkit-input-placeholder, input:-moz-placeholder, input::-moz-placeholde
   font-weight: 300
   color: #888
 
-// 6.5 Labels
-
 label
   font-size: 10px
   font-weight: 400
-
-// 6.6 Button Dropdowns & Select Boxes
-// Note: Rewrite dropdowns with SASS nesting
 
 select
   display: block
   float: left
   position: relative
-  background: $primary-color
-  background-image: linear-gradient(45deg, transparent 50%, #FFF 50%), linear-gradient(135deg, #FFF 50%, transparent 50%)
+  background: none
+  background-image: linear-gradient(45deg, transparent 50%, $primary-color 50%), linear-gradient(135deg, $primary-color 50%, transparent 50%)
   background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em
   background-size: 5px 5px
   background-repeat: no-repeat
   -webkit-appearance: none
   padding: 9px 20px 9px 20px
   border-radius: $border-radius
-  border: $border-color
-  color: #FFFFFF
+  border: $border-style
+  color: $primary-color
   font-weight: 500
   font-size: 10px
   text-transform: uppercase
   letter-spacing: 0.1em
   cursor: pointer
   width: 200px
-
-.dropdown
-  -webkit-appearance: none
-  position: relative
-  padding: 10px 40px 10px 20px
-  display: inline-block
-  text-decoration: none
-  font-weight: bold
-  margin: auto
-  border-radius: $border-radius
-  border: $border-color
-  background: $primary-color
-  color: #FFFFFF
-  font-weight: 500
-  font-size: 10px
-  text-transform: uppercase
-  letter-spacing: 0.1em
-  cursor: pointer
-  -webkit-user-select: none
-  -khtml-user-select: none
-  -moz-user-select: none
-  -o-user-select: none
-  user-select: none
-  @include transition(.3s)
-  &:hover, &dropdown:focus
-    color: #FFFFFF
-    background: darken( $primary-color, 20% )
-    border: 1px solid darken( $primary-color, 20% )
-  ul
-    position: absolute
-    z-index: 999
-    width: 100%
-    margin: 8px -20px
-    border-radius: 0
-    opacity: 0
-    padding: 40px 0 0
-    pointer-events: none
-    @include transition(.3s)
-    li
-      display: block
-      float: left
-      margin: 0
-      width: 100%
-      border-radius: 0
-      background: $primary-color
-      &:hover
-        color: #FFF
-        background: darken( $primary-color, 20% )
-      &:first-child
-        border-radius: $border-radius $border-radius 0 0
-      &:last-child
-        border-radius: 0 0 $border-radius $border-radius
-      a
-        text-decoration: none
-        text-transform: capitalize
-        padding: 10px
-        text-align: left
-        display: block
-        font-size: 10rem
-        font-weight: 500
-        color: #FFF
-        @include transition(.3s)
-
-.dropdown:after
-  position: absolute
-  top: 40%
-  right: 15px
-  content: " "
-  height: 0
-  border: solid transparent
-  border-top-color: #FFF
-  border-width: 5px
-  @include transition(.3s)
-
-.dropdown:hover:after
-  border-top-color: #FFF
-
-.dropdown ul:before
-  position: relative
-  top: 0
-  right: 15px
-  float: right
-  content: " "
-  height: 0
-  border: solid transparent
-  border-bottom-color: $primary-color
-  border-width: 5px
-
-.open > ul
-  opacity: 1
-  padding: 0
-  pointer-events: auto
-
-// 6.7 Tables
+  &:hover
+    background: $primary-color
+    color: #FFF
 
 table
   background: none
   font-size: 12px
-
   th
-    font-weight: 400
+    font-weight: 600
     text-align: left
-    padding: 5px 0
-
+    padding: 5px 10px
   tr
-    border-bottom: 1px solid $secondary-color
+    border-bottom: 1px solid #EAEAEA
     td
-      padding: 5px 0
+      padding: 5px 10px
 
-// 6.8 Tabs
+// Tabs
 
 ul.tabs:before
   clear: both
@@ -257,25 +189,22 @@ ul.tabs li
   color: #222
   display: inline-block
   padding: 10px 15px
-  border-radius: $border-radius $border-radius 0 0
+  border-radius: 1px 1px 0 0
   cursor: pointer
-  background: #ededed
+  background: #E1E1E1
 
 ul.tabs li.current
-  background: $secondary-color
+  background: #EAEAEA
   color: #222
 
 ul.tabs li:hover
-  background: $secondary-color
+  background: $primary-color
+  color: #FFF
 
 .tab-content
   display: none
-  background: $secondary-color
+  background: #EAEAEA
   padding: 10px
 
 .tab-content.current
   display: inherit
-
-//6.9 Checkboxes
-
-//6.10 Validation "Error Messages"

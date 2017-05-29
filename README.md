@@ -1,4 +1,4 @@
-# Sutairu 0.8.1
+# Sutairu 0.8.2
 Lighweight Sass Framework
 
 [![Code Climate](https://codeclimate.com/github/stefanmos/Sutairu/badges/gpa.svg)](https://codeclimate.com/github/stefanmos/Sutairu)
@@ -42,64 +42,51 @@ I have included a very basic configuration file to help you set up the desired a
 ```sass
 // CONFIG FILE
 
-// Set the number of columns
-$columns: 12
-$grid-size: 800px
+$columns: 12        // Number of columns
+$grid-size: 1024px  // Constrained width size
 
 // Breakpoints
-$desktop: 1100px
-$tablet: 700px
-$mobile: 480px
+$xl: 1440px
+$l: 1024px
+$m: 768px
+$s: 1px
 
 // Colours
 $body-color: #8A8A8A
-$primary-color: #8A8A8A
-$secondary-color: #F7F7F7
-$background-secondary: #F7F7F7
+$primary-color: #D670A2
+$secondary-color: #E5E5E5
 
-$border-color: 1px solid #8A8A8A
-
+// Notice
 $info: #3498db
 $verified: #83D699
 $warning: #e76e22
 $disabled: #8A8A8A
 
-// Fonts
-$brand-font: 'Raleway', sans-serif
-$font-base: 1px
-$global-line-height: 1
-$paragraph-line-height: 1.6
+// Borders
+$border-style: 1px solid $primary-color
+$border-radius: 2px
 
 // Paddings
 $content-padding: 10px
 $input-padding: 10px
 
-// Utilities
-$border-radius: 2px
-$opacity-overlay: .5
-
-// Spacers
-$spacer-desktop: 40px
-$spacer-tablet: 20px
-$spacer-mobile: 10px
-
 ```
 
-### Grids & Columns
+### Rows & Columns
 
-To start building a layout add `.grid` to create constrained content or `.grid-full` to create a full width section. They can also be used together by surrounding `.grid` with `.grid-full` when you want a full-width color background but you still want your content constrained. Afterwards just add your columns eg `column-6-12` and start creating your content.
+To start building a layout add `.row-grid` to create constrained content or `.row-full` to create a full width section. They can also be used together by surrounding `.row-grid` with `row-full` when you want a full-width color background but you still want your content constrained. Afterwards just add your columns eg `col-6-12` and start creating your content.
 
 ```html
-<div class="grid-full">
-    <div class="grid">  
-        <div class="column-4-12">
-            <div class="block">column-4-12</div>
+<div class="row-full">
+    <div class="row-grid">  
+        <div class="col-4-12">
+            <div class="block">column 4 of 12</div>
         </div>
-        <div class="column-4-12">
-            <div class="block">column-4-12</div>
+        <div class="col-4-12">
+            <div class="block">column 4 of 12</div>
         </div>
-        <div class="column-4-12">
-            <div class="block">column-4-12</div>
+        <div class="col-4-12">
+            <div class="block">column 4 of 12</div>
         </div>
     </div>
 </div>
