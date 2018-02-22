@@ -12,7 +12,7 @@ Website: http://stefanmos.github.io/sutairu/
 - Mixins are separated now
 - Fonts are all setup as rem with base of 1px
 - Font Ratio (Augmented Fourth 1.411) rounded to the closest whole number
-- Navagation bars with floated sections
+- Navagation with float sections
 
 ### Fixes
 - Floating fix with custom semantic buttons
@@ -22,7 +22,8 @@ Website: http://stefanmos.github.io/sutairu/
 - Add validation errors
 - Add sticky sections
 - Slider
-- Install with npm
+- NPM install
+- Ruby Gem
 
 ### Setup
 
