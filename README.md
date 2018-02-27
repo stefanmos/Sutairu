@@ -10,8 +10,6 @@ Website: http://stefanmos.github.io/sutairu/
 - Selectbox styling
 - Extented config
 - Mixins are separated now
-- Fonts are all setup as rem with base of 1px
-- Font Ratio (Augmented Fourth 1.411) rounded to the closest whole number
 - Navagation with float sections
 
 ### Fixes
@@ -24,6 +22,7 @@ Website: http://stefanmos.github.io/sutairu/
 - Slider
 - NPM install
 - Ruby Gem
+- Flexbox
 
 ### Setup
 
@@ -41,8 +40,8 @@ Included the Sutairu stylesheet and Javascript files
 I have included a very basic configuration file to help you set up the desired amount of columns, grid size, breakpoints, colors, fonts, paddings and a few utilities. Set these up to your requirements and run your SASS compiler.
 
 ```sass
-// CONFIG FILE
 
+//Grid
 $columns: 12        // Number of columns
 $grid-size: 1024px  // Constrained width size
 
@@ -51,6 +50,14 @@ $xl: 1440px
 $l: 1024px
 $m: 768px
 $s: 1px
+
+//Fonts
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900)
+
+$brand-font: 'Raleway', sans-serif
+$font-base: 16px
+$global-line-height: 1rem
+$paragraph-line-height: 1.6rem
 
 // Colours
 $body-color: #8A8A8A
@@ -68,7 +75,7 @@ $border-style: 1px solid $primary-color
 $border-radius: 2px
 
 // Paddings
-$content-padding: 10px
+$content-padding: 0.5rem
 $input-padding: 10px
 
 ```
