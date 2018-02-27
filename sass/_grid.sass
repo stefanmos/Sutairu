@@ -19,7 +19,7 @@ $col-width: 100% / $columns
 [class*='col']
   float: left
   padding: $content-padding
-  border: 1px solid #E1E1E1
+  border: 1px solid $tertiary-color
 
 // Columns, Push & Pulls
 
@@ -30,6 +30,8 @@ $col-width: 100% / $columns
     margin-left: (100/$columns)* $x + unquote("%")
   .pull-#{$x}-#{$columns}
     margin-left: unquote("-") + (100/$columns)* $x + unquote("%")
+  .pull-c, .push-c
+    margin: 0
 
 @media (min-width: $xl)
   @for $x from 1 through $columns
@@ -39,6 +41,8 @@ $col-width: 100% / $columns
       margin-left: (100/$columns)* $x + unquote("%")
     .pull-xl-#{$x}-#{$columns}
       margin-left: unquote("-") + (100/$columns)* $x + unquote("%")
+    .pull-xl-c, .push-xl-c
+      margin: 0
 
 @media (min-width: $l) and (max-width: $xl)
   @for $x from 1 through $columns
@@ -48,6 +52,8 @@ $col-width: 100% / $columns
       margin-left: (100/$columns)* $x + unquote("%")
     .pull-l-#{$x}-#{$columns}
       margin-left: unquote("-") + (100/$columns)* $x + unquote("%")
+    .pull-l-c, .push-l-c
+      margin: 0
 
 @media (min-width: $m) and (max-width: $l)
   @for $x from 1 through $columns
@@ -57,6 +63,8 @@ $col-width: 100% / $columns
       margin-left: (100/$columns)* $x + unquote("%")
     .pull-m-#{$x}-#{$columns}
       margin-left: unquote("-") + (100/$columns)* $x + unquote("%")
+    .pull-m-c, .push-m-c
+      margin: 0
 
 @media (min-width: $s) and (max-width: $m)
   @for $x from 1 through $columns
@@ -66,3 +74,5 @@ $col-width: 100% / $columns
       margin-left: (100/$columns)* $x + unquote("%")
     .pull-s-#{$x}-#{$columns}
       margin-left: unquote("-") + (100/$columns)* $x + unquote("%")
+    .pull-s-c, .push-s-c
+      margin: 0
